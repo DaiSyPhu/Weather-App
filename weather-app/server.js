@@ -20,9 +20,9 @@ app.get('/weather', async (req, res) => {
     try {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather`, {
             params: {
-                q: city,
-                units: 'metric',
-                appid: API_KEY
+                q: city, // tên thành phố cần tìm 
+                units: 'metric', // đơn vị đo nhiệt độ 
+                appid: API_KEY // API key của OpenWeather
             }
         });
         res.json(response.data);
